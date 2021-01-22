@@ -24,7 +24,7 @@ export default function Home() {
 
   // 単元リストの設定（0 ~ 15番まで）
   const units = [
-    "光と音 p6~, 38",
+    "光と音 p6~",
     "力と圧力 p14~",
     "物質の姿 p22~",
     "気体と水溶液 p30~",
