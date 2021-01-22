@@ -3,15 +3,17 @@ import { useState } from "react";
 
 export default function Home() {
   // 単元の初期値などの設定
-  const [unit, setUnit] = useState("");
+  const [unit, setUnit] = useState("下の「単元を選択」ボタンを押してね");
 
   // 問題番号の初期値などを設定
-  const [num, setNum] = useState(0);
+  const [num, setNum] = useState("下の「問題を選択」ボタンを押してね");
 
   // 単元を選択する関数を作成
   const selectUnit = () => {
     // ランダム値の生成 → iとして格納
+    let i = Math.floor(Math.random() * 16)
     // 単元i番目をsetUnit関数でセット
+    setUnit(units[i])
   };
 
   // 問題番号を設定する関数（ランダム関数で指定するのみ）
@@ -20,8 +22,25 @@ export default function Home() {
     setNum(random + 1);
   };
 
-  // 単元リストの設定
-  const units = ["光と音", "電流", "天気", "生物", "イオン", "力と圧力"];
+  // 単元リストの設定（0 ~ 15番まで）
+  const units = [
+    "光と音 p6~",
+    "力と圧力 p14~",
+    "物質の姿 p22~",
+    "気体と水溶液 p30~",
+    "電流 p42~",
+    "化学変化と原子・分子 p50~",
+    "運動とエネルギー p62~",
+    "化学変化とイオン p70~",
+    "科学技術と人間 p78~",
+    "植物の生活と種類 p90~",
+    "大地の変化 p98~",
+    "生物のからだのつくりと変化 p110~",
+    "天気とその変化 p120~",
+    "生物の成長と遺伝 p132~",
+    "地球と宇宙 p140~",
+    "自然と人間 p148~",
+  ];
 
   return (
     <div>
@@ -35,13 +54,13 @@ export default function Home() {
         </h1>
 
         {/* 単元表示部分 */}
-        <div
-          onClick={selectUnit}
-          className="bg-gray-200 my-1 px-10 py-2 rounded w-screen"
-        >
-          {units[0]}
+        <div className="bg-gray-200 my-1 px-10 py-2 rounded w-screen">
+          {unit}
         </div>
-        <button className="bg-gray-700 text-white my-1 px-10 py-2 rounded w-screen">
+        <button
+          onClick={selectUnit}
+          className="bg-gray-700 text-white my-1 px-10 py-2 rounded w-screen"
+        >
           単元を選択
         </button>
 
