@@ -68,7 +68,7 @@ export default function Home() {
         <div className="bg-gray-200 my-1 px-10 py-2 w-screen">{num}</div>
         <button
           onClick={getQuestionNumber}
-          className="bg-gray-700 text-white my-1 text-white px-10 py-2 rounded w-screen"
+          className="bg-gray-700 text-white my-1 px-10 py-2 rounded w-screen"
         >
           問題を選択
         </button>
