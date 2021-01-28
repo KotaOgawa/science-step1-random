@@ -8,18 +8,24 @@ export default function Home() {
   // 問題番号の初期値などを設定
   const [num, setNum] = useState("「問題を選択」ボタンを押してね");
 
+  // 累計回答数の初期値などを設定
+  const [sum, setSum] = useState(0);
+
   // 単元を選択する関数を作成
   const selectUnit = () => {
     // ランダム値の生成 → iとして格納
-    let i = Math.floor(Math.random() * 16)
+    let i = Math.floor(Math.random() * 16);
     // 単元i番目をsetUnit関数でセット
-    setUnit(units[i])
+    setUnit(units[i]);
   };
 
   // 問題番号を設定する関数（ランダム関数で指定するのみ）
   const getQuestionNumber = () => {
     let random = Math.floor(Math.random() * 42);
     setNum(random + 1);
+
+    // 問題選択ボタンが押されると累計回答数の数をプラス1する
+    setSum(sum + 1);
   };
 
   // 単元リストの設定（0 ~ 15番まで）
@@ -74,7 +80,9 @@ export default function Home() {
         </button>
 
         {/* 累計回答問題数 */}
-        <div className="bg-red-200 mt-10 px-10 py-2 w-full">累計回答数：{num}</div>
+        <div className="bg-red-200 mt-10 px-10 py-2 w-full text-sm">
+          累計回答数：{sum}
+        </div>
       </main>
     </div>
   );
