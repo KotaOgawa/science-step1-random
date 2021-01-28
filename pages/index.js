@@ -54,24 +54,27 @@ export default function Home() {
         </h1>
 
         {/* 単元表示部分 */}
-        <div className="bg-gray-200 my-1 px-10 py-2 rounded w-full">
+        <div className="bg-gray-200 my-1 px-10 py-2 rounded w-full text-lg">
           {unit}
         </div>
         <button
           onClick={selectUnit}
-          className="bg-gray-700 text-white my-1 px-10 py-2 rounded w-3/6"
+          className="bg-gray-700 text-white my-1 px-10 py-2 rounded w-full"
         >
           単元を選択
         </button>
 
         {/* 問題番号表示部分 */}
-        <div className="bg-gray-200 my-1 px-10 py-2 w-full">{num}</div>
+        <div className="bg-gray-200 my-1 px-10 py-2 w-full text-lg">{num}</div>
         <button
           onClick={getQuestionNumber}
-          className="bg-gray-700 text-white my-1 px-10 py-2 rounded w-3/6"
+          className="bg-gray-700 text-white my-1 px-10 py-2 rounded w-full"
         >
           問題を選択
         </button>
+
+        {/* 累計回答問題数 */}
+        <div className="bg-red-200 mt-10 px-10 py-2 w-full">累計回答数：{num}</div>
       </main>
     </div>
   );
