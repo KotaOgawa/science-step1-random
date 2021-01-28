@@ -48,27 +48,27 @@ export default function Home() {
         <title>自由自在理科ランダム</title>
       </Head>
 
-      <main className="text-gray-600 flex justify-center items-center flex-col">
+      <main className="p-5 text-gray-600 flex justify-center items-center flex-col">
         <h1 className="my-5 font-bold text-xl">
           自由自在理科：STEP1ランダム問題集
         </h1>
 
         {/* 単元表示部分 */}
-        <div className="bg-gray-200 my-1 px-10 py-2 rounded w-screen">
+        <div className="bg-gray-200 my-1 px-10 py-2 rounded w-full">
           {unit}
         </div>
         <button
           onClick={selectUnit}
-          className="bg-gray-700 text-white my-1 px-10 py-2 rounded w-screen"
+          className="bg-gray-700 text-white my-1 px-10 py-2 rounded w-3/6"
         >
           単元を選択
         </button>
 
         {/* 問題番号表示部分 */}
-        <div className="bg-gray-200 my-1 px-10 py-2 w-screen">{num}</div>
+        <div className="bg-gray-200 my-1 px-10 py-2 w-full">{num}</div>
         <button
           onClick={getQuestionNumber}
-          className="bg-gray-700 text-white my-1 px-10 py-2 rounded w-screen"
+          className="bg-gray-700 text-white my-1 px-10 py-2 rounded w-3/6"
         >
           問題を選択
         </button>
