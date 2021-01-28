@@ -3,10 +3,10 @@ import { useState } from "react";
 
 export default function Home() {
   // 単元の初期値などの設定
-  const [unit, setUnit] = useState("下の「単元を選択」ボタンを押してね");
+  const [unit, setUnit] = useState("「単元を選択」ボタンを押してね");
 
   // 問題番号の初期値などを設定
-  const [num, setNum] = useState("下の「問題を選択」ボタンを押してね");
+  const [num, setNum] = useState("「問題を選択」ボタンを押してね");
 
   // 単元を選択する関数を作成
   const selectUnit = () => {
@@ -48,7 +48,7 @@ export default function Home() {
         <title>自由自在理科ランダム</title>
       </Head>
 
-      <main className="p-5 text-gray-600 flex justify-center items-center flex-col">
+      <main className="px-5 text-gray-600 flex justify-center items-center flex-col">
         <h1 className="my-5 font-bold text-xl">
           自由自在理科：STEP1ランダム問題集
         </h1>
